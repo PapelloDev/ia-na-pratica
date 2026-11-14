@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Compra confirmada: IA na Prática</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--noite:#0F172A;--tinta:#1E293B;--linha:#334155;--y:#FACC15;--papel:#F1F5F9;--cinza:#94A3B8;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--noite);color:var(--w);font:400 18px/1.6 Poppins,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+h1,h2{font-weight:800;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(36px,6vw,60px);max-width:17ch}
+h2{font-size:clamp(28px,4.4vw,42px);max-width:20ch;margin-bottom:24px}
+.lead{color:var(--cinza);font-size:19px;max-width:34em;margin:22px 0 30px}
+.btn{display:inline-block;background:var(--y);color:var(--noite);font-weight:600;font-size:18px;text-decoration:none;padding:17px 30px;border-radius:999px}
+.btn:hover{background:#FDE047}
+.nota{color:var(--cinza);font-size:15px;margin-top:12px}
+.marca{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:18px;margin:28px 0 48px}
+.marca b{border:3px solid var(--y);color:var(--y);padding:0 7px;line-height:1.3}
+
+/* hero: a conversa */
+.hero{display:grid;gap:48px;align-items:center;padding-bottom:72px}
+@media(min-width:880px){.hero{grid-template-columns:1.05fr .95fr}}
+.fone{background:var(--tinta);border:1px solid var(--linha);border-radius:36px;padding:22px 18px 26px;max-width:400px;width:100%;justify-self:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.fone header{display:flex;align-items:center;gap:12px;padding:0 6px 16px;border-bottom:1px solid var(--linha);margin-bottom:16px}
+.fone header i{width:40px;height:40px;border-radius:50%;background:#475569;display:grid;place-items:center;font-style:normal;font-weight:600}
+.fone header small{display:block;color:var(--cinza);font-size:13px}
+.msg{max-width:86%;padding:11px 15px;border-radius:18px;font-size:15.5px;line-height:1.45;margin-bottom:10px}
+.cli{background:#334155;border-bottom-left-radius:6px}
+.eu{background:var(--y);color:var(--noite);margin-left:auto;border-bottom-right-radius:6px}
+.sis{text-align:center;color:var(--cinza);font-size:13px;margin:16px 0 12px}
+.anim .msg,.anim .sis{opacity:0;transform:translateY(8px);animation:surge .45s ease-out forwards}
+.anim>*:nth-child(2){animation-delay:.3s}.anim>*:nth-child(3){animation-delay:1.3s}
+.anim>*:nth-child(4){animation-delay:2.1s}.anim>*:nth-child(5){animation-delay:2.9s}.anim>*:nth-child(6){animation-delay:3.7s}
+@keyframes surge{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.anim .msg,.anim .sis{animation:none;opacity:1;transform:none}}
+
+section{padding:88px 0}
+.dores{display:grid;gap:4px;max-width:720px}
+.dores p{font-size:clamp(20px,2.6vw,26px);font-weight:500;padding:18px 0;border-top:1px solid var(--linha)}
+.dores p:last-child{border-bottom:1px solid var(--linha)}
+.virada{font-size:19px;max-width:36em;margin-top:32px;color:var(--cinza)}
+.virada strong{color:var(--w);font-weight:600}
+
+/* sumário: seção clara, como abrir o livro */
+.livro{background:var(--papel);color:var(--noite)}
+.livro .nota{color:#475569}
+.sumario{list-style:none;max-width:760px;margin-top:8px}
+.sumario li{display:grid;grid-template-columns:3ch 1fr;gap:14px;padding:16px 0;border-top:1px solid #CBD5E1}
+.sumario li span{font-weight:800;color:#64748B}
+.sumario li b{font-weight:600;display:block}
+.sumario li em{font-style:normal;color:#475569;font-size:16px}
+.capa-linha{display:grid;gap:40px;align-items:start}
+@media(min-width:880px){.capa-linha{grid-template-columns:1fr 300px}}
+.capa-linha img{width:100%;max-width:300px;box-shadow:0 24px 60px -18px rgba(15,23,42,.45);justify-self:center;position:sticky;top:32px}
+
+.prompt{background:var(--tinta);border:1px solid var(--linha);border-radius:20px;padding:26px;max-width:720px;font-size:17px}
+.prompt mark{background:none;color:var(--y);font-weight:500}
+.duas{display:grid;gap:48px;align-items:center}
+@media(min-width:880px){.duas{grid-template-columns:1.2fr .8fr}}
+video{width:100%;max-width:320px;border-radius:24px;border:1px solid var(--linha);justify-self:center;display:block}
+
+.preco{display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.preco{grid-template-columns:1fr 1fr}}
+.valor{font-size:clamp(72px,12vw,120px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.valor small{font-size:.3em;font-weight:500;letter-spacing:0;color:var(--cinza);margin-right:6px;vertical-align:.9em}
+.cupom{border:2px dashed var(--y);border-radius:16px;padding:20px 22px;margin-top:22px;max-width:420px}
+.cupom b{color:var(--y)}
+.garantia{color:var(--cinza);max-width:32em}
+.garantia strong{color:var(--w);display:block;font-size:22px;margin-bottom:6px}
+
+details{border-top:1px solid var(--linha);padding:20px 0;max-width:760px}
+details:last-of-type{border-bottom:1px solid var(--linha)}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--y);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{color:var(--cinza);margin-top:10px;max-width:40em}
+footer{padding:48px 0 120px;color:var(--cinza);font-size:15px}
+footer p+p{margin-top:4px}
+.fixo{position:fixed;inset:auto 0 0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(15,23,42,.94);backdrop-filter:blur(8px);border-top:1px solid var(--linha);text-align:center}
+.fixo .btn{width:100%;max-width:440px;padding:14px}
+@media(min-width:880px){.fixo{display:none}}
+
+.passos{list-style:none;counter-reset:p;max-width:720px;display:grid;gap:4px}
+.passos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:18px 0;border-top:1px solid var(--linha);color:var(--cinza)}
+.passos li::before{content:counter(p);grid-row:span 2;width:36px;height:36px;border-radius:50%;background:var(--y);color:var(--noite);font-weight:800;display:grid;place-items:center}
+.passos li b{color:var(--w);font-weight:600;font-size:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="marca"><b>IA</b> na Prática</div>
+  <h1>Compra confirmada. Seu guia já está a caminho.</h1>
+  <p class="lead">Obrigado pela confiança. Veja como pegar o PDF e começar ainda hoje.</p>
+</div>
+
+<section class="wrap" style="padding-top:24px">
+  <h2>Como acessar</h2>
+  <ol class="passos">
+    <li><b>Abra o e-mail da Kiwify</b>Ele chega no endereço que você usou na compra, em poucos minutos. Se não estiver na caixa de entrada, procure em Spam ou Promoções.</li>
+    <li><b>Entre na área de membros</b>Clique no botão de acesso do e-mail e crie a sua senha no primeiro login.</li>
+    <li><b>Baixe o PDF</b>Ele está na aula "Seu ebook". Abre no celular e no computador; salve no celular para ter sempre à mão.</li>
+  </ol>
+  <p class="virada">Pagou com boleto? O acesso chega quando o banco confirmar o pagamento, em até 3 dias úteis.</p>
+</section>
+
+<section class="livro">
+  <div class="wrap">
+    <h2>Comece pelo plano de 7 dias</h2>
+    <p class="nota">Cerca de 30 minutos por dia. Os detalhes estão no capítulo 10.</p>
+    <ol class="sumario">
+      <li><span>1</span><div><b>A base</b><em>Crie sua conta numa IA gratuita e monte a ficha do seu negócio (prompt 1).</em></div></li>
+      <li><span>2</span><div><b>WhatsApp</b><em>Boas-vindas e respostas para as 5 perguntas que você mais recebe.</em></div></li>
+      <li><span>3</span><div><b>Instagram</b><em>Reescreva a bio e poste o primeiro de 7 posts planejados.</em></div></li>
+      <li><span>4</span><div><b>Vendas</b><em>Descrição do produto mais vendido e a resposta para o "tá caro".</em></div></li>
+      <li><span>5</span><div><b>Números</b><em>Planilha de caixa, preço e ponto de equilíbrio.</em></div></li>
+      <li><span>6</span><div><b>Marketing</b><em>Perfil no Google e a promoção da próxima data comercial.</em></div></li>
+      <li><span>7</span><div><b>Revisão</b><em>Escolha os 3 prompts que mais ajudaram e coloque na rotina.</em></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Precisa de ajuda?</h2>
+  <p class="virada" style="margin-top:0">Não recebeu o e-mail ou algo não abriu? Escreva para <strong>ianapratica.rafael@gmail.com</strong> com o e-mail usado na compra. Você também tem 7 dias de garantia: se não gostar, peça o reembolso pela Kiwify.</p>
+  <p class="virada">Dicas novas toda semana no Instagram <a href="https://www.instagram.com/iapratica.negocios.br"><strong>@iapratica.negocios.br</strong></a>.</p>
+</section>
+<footer class="wrap"><p>IA na Prática</p></footer>
+</body>
+</html>
