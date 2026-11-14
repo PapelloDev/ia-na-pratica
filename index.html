@@ -8,136 +8,195 @@
 <meta property="og:title" content="IA na Prática para Pequenos Negócios">
 <meta property="og:description" content="60 prompts prontos para vender mais e trabalhar menos. Sem precisar entender de tecnologia.">
 <meta property="og:image" content="https://iapraticanegocios.com.br/capa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0F172A;--card:#1E293B;--y:#FACC15;--w:#FFFFFF;--g:#94A3B8;--line:#334155}
+:root{--noite:#0F172A;--tinta:#1E293B;--linha:#334155;--y:#FACC15;--papel:#F1F5F9;--cinza:#94A3B8;--w:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--w);font-family:Arial,Helvetica,sans-serif;line-height:1.55;font-size:17px}
+body{background:var(--noite);color:var(--w);font:400 18px/1.6 Poppins,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-section{padding:56px 0;border-bottom:1px solid var(--line)}
-h1{font-size:clamp(30px,6vw,46px);line-height:1.15;margin:18px 0}
-h2{font-size:clamp(24px,4.5vw,32px);line-height:1.2;margin-bottom:20px}
-h1 em,h2 em{font-style:normal;color:var(--y)}
-p{margin-bottom:14px}
-.muted{color:var(--g)}
-.logo{display:inline-block;border:3px solid var(--y);color:var(--y);font-weight:bold;font-size:22px;padding:2px 10px}
-.hero{display:grid;gap:32px;align-items:center;padding-top:40px}
-@media(min-width:720px){.hero{grid-template-columns:1.3fr 1fr}}
-.hero img{width:100%;max-width:300px;justify-self:center;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid var(--line)}
-.btn{display:block;text-align:center;background:var(--y);color:var(--bg);font-weight:bold;font-size:19px;text-decoration:none;padding:18px 24px;border-radius:10px;margin:22px 0 8px}
-.btn:hover{filter:brightness(1.08)}
-.small{font-size:14px;color:var(--g);text-align:center}
-ul.check{list-style:none}
-ul.check li{padding:9px 0 9px 32px;position:relative}
-ul.check li:before{content:"✓";position:absolute;left:0;color:var(--y);font-weight:bold}
-ul.x li:before{content:"✗";color:#F87171}
-.grid{display:grid;gap:14px}
-@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
-.card b{color:var(--y);display:block;margin-bottom:4px}
-.prompt{background:var(--card);border-left:4px solid var(--y);border-radius:8px;padding:18px;font-size:16px;margin:16px 0}
-.price{text-align:center;background:var(--card);border:2px solid var(--y);border-radius:16px;padding:30px 20px}
-.price .de{color:var(--g);text-decoration:line-through}
-.price .por{font-size:52px;font-weight:bold;color:var(--y);line-height:1.1}
-details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:bold}
-details p{margin:10px 0 0;color:var(--g)}
-footer{padding:30px 0 90px;text-align:center;color:var(--g);font-size:14px}
-.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(15,23,42,.96);border-top:1px solid var(--line);padding:10px 16px}
-.sticky .btn{margin:0 auto;max-width:520px;padding:14px;font-size:17px}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+h1,h2{font-weight:800;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(36px,6vw,60px);max-width:17ch}
+h2{font-size:clamp(28px,4.4vw,42px);max-width:20ch;margin-bottom:24px}
+.lead{color:var(--cinza);font-size:19px;max-width:34em;margin:22px 0 30px}
+.btn{display:inline-block;background:var(--y);color:var(--noite);font-weight:600;font-size:18px;text-decoration:none;padding:17px 30px;border-radius:999px}
+.btn:hover{background:#FDE047}
+.nota{color:var(--cinza);font-size:15px;margin-top:12px}
+.marca{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:18px;margin:28px 0 48px}
+.marca b{border:3px solid var(--y);color:var(--y);padding:0 7px;line-height:1.3}
+
+/* hero: a conversa */
+.hero{display:grid;gap:48px;align-items:center;padding-bottom:72px}
+@media(min-width:880px){.hero{grid-template-columns:1.05fr .95fr}}
+.fone{background:var(--tinta);border:1px solid var(--linha);border-radius:36px;padding:22px 18px 26px;max-width:400px;width:100%;justify-self:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.fone header{display:flex;align-items:center;gap:12px;padding:0 6px 16px;border-bottom:1px solid var(--linha);margin-bottom:16px}
+.fone header i{width:40px;height:40px;border-radius:50%;background:#475569;display:grid;place-items:center;font-style:normal;font-weight:600}
+.fone header small{display:block;color:var(--cinza);font-size:13px}
+.msg{max-width:86%;padding:11px 15px;border-radius:18px;font-size:15.5px;line-height:1.45;margin-bottom:10px}
+.cli{background:#334155;border-bottom-left-radius:6px}
+.eu{background:var(--y);color:var(--noite);margin-left:auto;border-bottom-right-radius:6px}
+.sis{text-align:center;color:var(--cinza);font-size:13px;margin:16px 0 12px}
+.anim .msg,.anim .sis{opacity:0;transform:translateY(8px);animation:surge .45s ease-out forwards}
+.anim>*:nth-child(2){animation-delay:.3s}.anim>*:nth-child(3){animation-delay:1.3s}
+.anim>*:nth-child(4){animation-delay:2.1s}.anim>*:nth-child(5){animation-delay:2.9s}.anim>*:nth-child(6){animation-delay:3.7s}
+@keyframes surge{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.anim .msg,.anim .sis{animation:none;opacity:1;transform:none}}
+
+section{padding:88px 0}
+.dores{display:grid;gap:4px;max-width:720px}
+.dores p{font-size:clamp(20px,2.6vw,26px);font-weight:500;padding:18px 0;border-top:1px solid var(--linha)}
+.dores p:last-child{border-bottom:1px solid var(--linha)}
+.virada{font-size:19px;max-width:36em;margin-top:32px;color:var(--cinza)}
+.virada strong{color:var(--w);font-weight:600}
+
+/* sumário: seção clara, como abrir o livro */
+.livro{background:var(--papel);color:var(--noite)}
+.livro .nota{color:#475569}
+.sumario{list-style:none;max-width:760px;margin-top:8px}
+.sumario li{display:grid;grid-template-columns:3ch 1fr;gap:14px;padding:16px 0;border-top:1px solid #CBD5E1}
+.sumario li span{font-weight:800;color:#64748B}
+.sumario li b{font-weight:600;display:block}
+.sumario li em{font-style:normal;color:#475569;font-size:16px}
+.capa-linha{display:grid;gap:40px;align-items:start}
+@media(min-width:880px){.capa-linha{grid-template-columns:1fr 300px}}
+.capa-linha img{width:100%;max-width:300px;box-shadow:0 24px 60px -18px rgba(15,23,42,.45);justify-self:center;position:sticky;top:32px}
+
+.prompt{background:var(--tinta);border:1px solid var(--linha);border-radius:20px;padding:26px;max-width:720px;font-size:17px}
+.prompt mark{background:none;color:var(--y);font-weight:500}
+.duas{display:grid;gap:48px;align-items:center}
+@media(min-width:880px){.duas{grid-template-columns:1.2fr .8fr}}
+video{width:100%;max-width:320px;border-radius:24px;border:1px solid var(--linha);justify-self:center;display:block}
+
+.preco{display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.preco{grid-template-columns:1fr 1fr}}
+.valor{font-size:clamp(72px,12vw,120px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.valor small{font-size:.3em;font-weight:500;letter-spacing:0;color:var(--cinza);margin-right:6px;vertical-align:.9em}
+.cupom{border:2px dashed var(--y);border-radius:16px;padding:20px 22px;margin-top:22px;max-width:420px}
+.cupom b{color:var(--y)}
+.garantia{color:var(--cinza);max-width:32em}
+.garantia strong{color:var(--w);display:block;font-size:22px;margin-bottom:6px}
+
+details{border-top:1px solid var(--linha);padding:20px 0;max-width:760px}
+details:last-of-type{border-bottom:1px solid var(--linha)}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--y);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{color:var(--cinza);margin-top:10px;max-width:40em}
+footer{padding:48px 0 120px;color:var(--cinza);font-size:15px}
+footer p+p{margin-top:4px}
+.fixo{position:fixed;inset:auto 0 0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(15,23,42,.94);backdrop-filter:blur(8px);border-top:1px solid var(--linha);text-align:center}
+.fixo .btn{width:100%;max-width:440px;padding:14px}
+@media(min-width:880px){.fixo{display:none}}
 </style>
 </head>
 <body>
 
-<section class="wrap hero" style="border:0">
-  <div>
-    <span class="logo">IA na Prática</span>
-    <h1>Use a inteligência artificial para <em>vender mais e trabalhar menos</em>, mesmo sem entender de tecnologia.</h1>
-    <p class="muted">60 prompts prontos para copiar e colar no ChatGPT, Claude ou Gemini (versões gratuitas) e resolver o dia a dia do seu pequeno negócio.</p>
-    <a class="btn" href="https://pay.kiwify.com.br/k8q4xds">Quero os 60 prompts por R$ 37</a>
-    <p class="small">PDF na hora no seu e-mail · Garantia de 7 dias</p>
+<div class="wrap">
+  <div class="marca"><b>IA</b> na Prática</div>
+  <div class="hero">
+    <div>
+      <h1>60 pedidos prontos para a IA resolver o dia a dia do seu negócio</h1>
+      <p class="lead">Copie, cole no ChatGPT, Claude ou Gemini (versões gratuitas), troque o que está entre colchetes e use a resposta. Para WhatsApp, Instagram, vendas, preços e documentos.</p>
+      <a class="btn" href="https://pay.kiwify.com.br/k8q4xds">Quero os 60 prompts por R$ 37</a>
+      <p class="nota">PDF no seu e-mail logo após o pagamento. Garantia de 7 dias.</p>
+    </div>
+    <div class="fone" aria-label="Exemplo de conversa usando o prompt 23">
+      <header><i>M</i><div>Mariana<small>cliente</small></div></header>
+      <div class="anim">
+        <p class="msg cli">Amei o bolo, mas R$ 120 tá caro 😕</p>
+        <p class="sis">Você usou o prompt 23 e a IA sugeriu:</p>
+        <p class="msg eu">O recheio é artesanal e a entrega é no horário que você escolher, sem taxa.</p>
+        <p class="msg eu">Se preferir, tenho a versão de 1 kg por R$ 80, com o mesmo recheio.</p>
+        <p class="msg eu">Posso perguntar com qual orçamento você comparou? Assim te mostro a diferença.</p>
+      </div>
+    </div>
   </div>
-  <img src="capa.png" alt="Capa do ebook IA na Prática para Pequenos Negócios">
-</section>
+</div>
 
 <section class="wrap">
   <h2>Você se reconhece aqui?</h2>
-  <ul class="check x">
-    <li>Passa horas respondendo as mesmas perguntas no WhatsApp.</li>
-    <li>Trava na hora de escrever legenda, e o Instagram fica parado.</li>
-    <li>Não sabe se o seu preço dá lucro de verdade.</li>
-    <li>Já ouviu falar de IA, abriu o ChatGPT e recebeu uma resposta genérica que não serviu para nada.</li>
-  </ul>
-  <p style="margin-top:18px">O problema não é a IA. É o <b>pedido</b>. Quem sabe pedir recebe um texto pronto para mandar ao cliente. Este guia te entrega os pedidos prontos.</p>
-</section>
-
-<section class="wrap">
-  <h2>Veja um dos 60 prompts</h2>
-  <p class="muted">É só trocar o que está entre colchetes pelos dados do seu negócio:</p>
-  <p class="muted"><b>Prompt 23: respondendo ao "tá caro"</b></p>
-  <div class="prompt">Esta é a ficha do meu negócio: [COLE A FICHA]. Um cliente disse que o meu [PRODUTO OU SERVIÇO] de R$ [PREÇO] está caro. Meu diferencial em relação aos concorrentes é: [DIFERENCIAL]. Escreva 3 respostas diferentes para o WhatsApp: uma que reforça o valor, uma que oferece parcelamento ou uma opção mais simples, e uma que pergunta com quem ele está comparando. Nenhuma deve baixar o preço de imediato.</div>
-  <p>Em segundos você tem 3 respostas prontas, com a cara do seu negócio. Agora imagine isso para cobrança, orçamento, legenda, preço, política de troca…</p>
-  <video src="video-ta-caro.mp4" poster="video-poster.jpg" controls playsinline preload="metadata" style="display:block;width:100%;max-width:320px;margin:24px auto 6px;border-radius:12px;border:1px solid var(--line)"></video>
-  <p class="small">Veja em 25 segundos · narração gerada por IA</p>
-</section>
-
-<section class="wrap">
-  <h2>O que tem <em>dentro</em></h2>
-  <div class="grid">
-    <div class="card"><b>WhatsApp</b>Respostas rápidas, cobrança educada, cliente irritado, reativar quem sumiu.</div>
-    <div class="card"><b>Instagram</b>Calendário de 30 dias, legendas, roteiros de Reels, bio que converte.</div>
-    <div class="card"><b>Vendas</b>Orçamento profissional, objeção "tá caro", pós-venda que gera indicação.</div>
-    <div class="card"><b>Marketing</b>Promoções, datas comerciais, parcerias e perfil no Google.</div>
-    <div class="card"><b>Números</b>Preço de venda, ponto de equilíbrio, caixa, estoque e pró-labore.</div>
-    <div class="card"><b>Rotina e equipe</b>Organizar a semana, treinar funcionário, anúncio de vaga.</div>
-    <div class="card"><b>Documentos</b>Política de troca, recibo, contrato simples, termo de garantia.</div>
-    <div class="card"><b>Cuidados</b>O que nunca colar numa IA e a LGPD explicada em uma página.</div>
+  <div class="dores">
+    <p>Passa horas respondendo as mesmas perguntas no WhatsApp.</p>
+    <p>Trava na hora de escrever legenda, e o Instagram fica parado.</p>
+    <p>Não sabe se o seu preço dá lucro de verdade.</p>
+    <p>Abriu o ChatGPT e recebeu uma resposta genérica que não serviu para nada.</p>
   </div>
-  <ul class="check" style="margin-top:22px">
-    <li><b>Plano de 7 dias</b>: 30 minutos por dia para colocar tudo em prática.</li>
-    <li><b>Bônus</b>: os 10 prompts para usar toda semana, em uma página.</li>
-    <li><b>A fórmula do bom pedido</b>, para criar os seus próprios prompts.</li>
-  </ul>
+  <p class="virada">O problema não é a IA, é o pedido. <strong>Quem sabe pedir recebe um texto pronto para mandar ao cliente.</strong> Este guia entrega os pedidos prontos.</p>
+</section>
+
+<section class="livro">
+  <div class="wrap capa-linha">
+    <div>
+      <h2>O que tem no guia</h2>
+      <p class="nota">Cada capítulo traz os prompts prontos e um exemplo de resposta.</p>
+      <ol class="sumario">
+        <li><span>1</span><div><b>Primeiros passos</b><em>A ficha do seu negócio e a fórmula do bom pedido.</em></div></li>
+        <li><span>2</span><div><b>Atendimento no WhatsApp</b><em>Respostas rápidas, cobrança educada, cliente irritado, quem sumiu.</em></div></li>
+        <li><span>3</span><div><b>Instagram sem travar</b><em>Calendário de 30 dias, legendas, roteiros de Reels, bio.</em></div></li>
+        <li><span>4</span><div><b>Vendas e orçamentos</b><em>Orçamento profissional, a objeção do "tá caro", pós-venda.</em></div></li>
+        <li><span>5</span><div><b>Marketing com pouco dinheiro</b><em>Promoções, datas comerciais, parcerias, perfil no Google.</em></div></li>
+        <li><span>6</span><div><b>Planilhas e números</b><em>Preço de venda, ponto de equilíbrio, caixa, estoque, pró-labore.</em></div></li>
+        <li><span>7</span><div><b>Rotina e equipe</b><em>Organizar a semana, treinar funcionário, anúncio de vaga.</em></div></li>
+        <li><span>8</span><div><b>Documentos do dia a dia</b><em>Política de troca, recibo, contrato simples, garantia.</em></div></li>
+        <li><span>9</span><div><b>Cuidados ao usar IA</b><em>O que nunca colar numa IA e a LGPD em uma página.</em></div></li>
+        <li><span>10</span><div><b>Plano de 7 dias</b><em>30 minutos por dia para colocar tudo em prática.</em></div></li>
+        <li><span>+</span><div><b>Bônus</b><em>Os 10 prompts para usar toda semana, em uma página.</em></div></li>
+      </ol>
+    </div>
+    <img src="capa.png" alt="Capa do ebook IA na Prática para Pequenos Negócios">
+  </div>
+</section>
+
+<section class="wrap duas">
+  <div>
+    <h2>Veja o prompt 23 por inteiro</h2>
+    <div class="prompt">Esta é a ficha do meu negócio: <mark>[COLE A FICHA]</mark>. Um cliente disse que o meu <mark>[PRODUTO OU SERVIÇO]</mark> de R$ <mark>[PREÇO]</mark> está caro. Meu diferencial em relação aos concorrentes é: <mark>[DIFERENCIAL]</mark>. Escreva 3 respostas diferentes para o WhatsApp: uma que reforça o valor, uma que oferece parcelamento ou uma opção mais simples, e uma que pergunta com quem ele está comparando. Nenhuma deve baixar o preço de imediato.</div>
+    <p class="virada">Troque o que está em amarelo pelos dados do seu negócio. Agora imagine isso para cobrança, orçamento, legenda, preço e política de troca.</p>
+  </div>
+  <div>
+    <video src="video-ta-caro.mp4" poster="video-poster.jpg" controls playsinline preload="metadata"></video>
+    <p class="nota" style="text-align:center">O mesmo prompt em 26 segundos</p>
+  </div>
 </section>
 
 <section class="wrap">
   <h2>Para quem é</h2>
-  <ul class="check">
-    <li>MEI, autônomos e donos de pequeno negócio que fazem tudo sozinhos.</li>
-    <li>Quem vende produto ou serviço pelo WhatsApp e Instagram.</li>
-    <li>Quem nunca usou IA, ou usou e não viu resultado.</li>
-  </ul>
-  <p class="muted" style="margin-top:14px">Não é para quem procura teoria ou curso técnico. É prático: copiar, colar, adaptar, usar.</p>
-</section>
-
-<section class="wrap">
-  <div class="price">
-    <p class="muted">Menos que um lanche, para economizar horas toda semana</p>
-    <p class="por">R$ 37</p>
-    <p class="muted">ou em até 12x no cartão · Pix · boleto</p>
-    <a class="btn" href="https://pay.kiwify.com.br/k8q4xds">Quero meu acesso agora</a>
-    <p class="small">Lançamento: de 27/11 a 03/12 use o cupom <b style="color:var(--y)">LANCA27</b> e pague R$ 27.</p>
+  <div class="dores">
+    <p>MEI, autônomos e donos de pequeno negócio que fazem tudo sozinhos.</p>
+    <p>Quem vende produto ou serviço pelo WhatsApp e pelo Instagram.</p>
+    <p>Quem nunca usou IA, ou usou e não viu resultado.</p>
   </div>
+  <p class="virada">Não é teoria nem curso técnico. É copiar, colar, adaptar e usar.</p>
 </section>
 
-<section class="wrap">
-  <h2>Garantia de 7 dias</h2>
-  <p>Leia, teste os prompts no seu negócio. Se não gostar, peça o reembolso em até 7 dias direto pela Kiwify. Sem perguntas.</p>
+<section class="wrap preco">
+  <div>
+    <p class="valor"><small>R$</small>37</p>
+    <p class="nota">Pix, boleto ou até 12x no cartão.</p>
+    <div class="cupom">De 27/11 a 03/12, use o cupom <b>LANCA27</b> no pagamento e pague R$ 27.</div>
+  </div>
+  <div>
+    <p class="garantia"><strong>Garantia de 7 dias</strong>Leia e teste os prompts no seu negócio. Se não gostar, peça o reembolso em até 7 dias direto pela Kiwify, sem precisar explicar.</p>
+    <a class="btn" style="margin-top:28px" href="https://pay.kiwify.com.br/k8q4xds">Comprar o guia</a>
+  </div>
 </section>
 
 <section class="wrap">
   <h2>Perguntas frequentes</h2>
   <details><summary>Preciso pagar alguma IA?</summary><p>Não. Tudo funciona nas versões gratuitas do ChatGPT, Claude ou Gemini.</p></details>
-  <details><summary>Serve para o meu tipo de negócio?</summary><p>Sim, se você vende produto ou serviço para clientes. Os prompts se adaptam com a "ficha do seu negócio", que você monta no primeiro capítulo.</p></details>
-  <details><summary>Como recebo?</summary><p>Logo após o pagamento você recebe um e-mail com o acesso. O PDF abre no celular e no computador.</p></details>
-  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso e recebe o dinheiro de volta.</p></details>
+  <details><summary>Serve para o meu tipo de negócio?</summary><p>Sim, se você vende produto ou serviço para clientes. Os prompts se adaptam com a ficha do seu negócio, que você monta no primeiro capítulo.</p></details>
+  <details><summary>Como recebo?</summary><p>Logo após o pagamento chega um e-mail com o acesso. O PDF abre no celular e no computador.</p></details>
+  <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso pela Kiwify e recebe o dinheiro de volta.</p></details>
 </section>
 
 <footer class="wrap">
-  <p>IA na Prática · <a href="https://www.instagram.com/iapratica.negocios.br">@iapratica.negocios.br</a></p>
+  <p>IA na Prática, <a href="https://www.instagram.com/iapratica.negocios.br">@iapratica.negocios.br</a></p>
   <p>Suporte: ianapratica.rafael@gmail.com</p>
 </footer>
 
-<div class="sticky"><a class="btn" href="https://pay.kiwify.com.br/k8q4xds">Quero os 60 prompts · R$ 37</a></div>
+<div class="fixo"><a class="btn" href="https://pay.kiwify.com.br/k8q4xds">Quero os 60 prompts por R$ 37</a></div>
 </body>
 </html>
