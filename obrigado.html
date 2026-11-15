@@ -93,6 +93,28 @@ footer p+p{margin-top:4px}
 .passos li::before{content:counter(p);grid-row:span 2;width:36px;height:36px;border-radius:50%;background:var(--y);color:var(--noite);font-weight:800;display:grid;place-items:center}
 .passos li b{color:var(--w);font-weight:600;font-size:20px}
 </style>
+<meta name="facebook-domain-verification" content="ygqd9m0s4orgsuxzgygtpee6qhunpa" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4094260170716588');
+fbq('track', 'PageView');
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
+  if (a) fbq('track', 'InitiateCheckout', { currency: 'BRL', value: parseFloat(a.dataset.valor || '0') });
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4094260170716588&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div class="wrap">

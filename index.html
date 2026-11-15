@@ -106,6 +106,28 @@ footer p+p{margin-top:4px}
 .fixo .btn{width:100%;max-width:440px;padding:14px}
 @media(min-width:880px){.fixo{display:none}}
 </style>
+<meta name="facebook-domain-verification" content="ygqd9m0s4orgsuxzgygtpee6qhunpa" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4094260170716588');
+fbq('track', 'PageView');
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
+  if (a) fbq('track', 'InitiateCheckout', { currency: 'BRL', value: parseFloat(a.dataset.valor || '0') });
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4094260170716588&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -115,7 +137,7 @@ footer p+p{margin-top:4px}
     <div>
       <h1>60 pedidos prontos para a IA resolver o dia a dia do seu negócio</h1>
       <p class="lead">Copie, cole no ChatGPT, Claude ou Gemini (versões gratuitas), troque o que está entre colchetes e use a resposta. Para WhatsApp, Instagram, vendas, preços e documentos.</p>
-      <a class="btn" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=topo">Quero os 60 prompts por R$ 37</a>
+      <a class="btn" data-valor="37" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=topo">Quero os 60 prompts por R$ 37</a>
       <p class="nota">PDF no seu e-mail logo após o pagamento. Garantia de 7 dias.</p>
     </div>
     <div class="fone" aria-label="Exemplo de conversa usando o prompt 23">
@@ -195,7 +217,7 @@ footer p+p{margin-top:4px}
   </div>
   <div>
     <p class="garantia"><strong>Garantia de 7 dias</strong>Leia e teste os prompts no seu negócio. Se não gostar, peça o reembolso em até 7 dias direto pela Kiwify, sem precisar explicar.</p>
-    <a class="btn" style="margin-top:28px" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=preco">Comprar o guia</a>
+    <a class="btn" data-valor="37" style="margin-top:28px" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=preco">Comprar o guia</a>
   </div>
 </section>
 
@@ -212,6 +234,6 @@ footer p+p{margin-top:4px}
   <p>Suporte: ianapratica.rafael@gmail.com</p>
 </footer>
 
-<div class="fixo"><a class="btn" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=fixo">Quero os 60 prompts por R$ 37</a></div>
+<div class="fixo"><a class="btn" data-valor="37" href="https://pay.kiwify.com.br/k8q4xds?utm_source=site&utm_content=fixo">Quero os 60 prompts por R$ 37</a></div>
 </body>
 </html>
