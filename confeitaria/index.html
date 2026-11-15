@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<link rel="canonical" href="https://iapraticanegocios.com.br/confeitaria/">
+<meta property="og:url" content="https://iapraticanegocios.com.br/confeitaria/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA na Prática para Confeitaria: 40 prompts prontos</title>
+<meta name="description" content="40 prompts prontos de IA para quem vende bolos e doces: orçamento no WhatsApp, preço certo, Instagram, datas comemorativas e política de encomendas.">
+<meta property="og:title" content="IA na Prática para Confeitaria">
+<meta property="og:description" content="40 prompts prontos para quem vende bolos e doces. Sem precisar entender de tecnologia.">
+<meta property="og:image" content="https://iapraticanegocios.com.br/capa.png">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image:width" content="847">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="IA na Prática">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/capa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--noite:#0F172A;--tinta:#1E293B;--linha:#334155;--y:#FACC15;--papel:#F1F5F9;--cinza:#94A3B8;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--noite);color:var(--w);font:400 18px/1.6 Poppins,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+h1,h2{font-weight:800;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(36px,6vw,60px);max-width:17ch}
+h2{font-size:clamp(28px,4.4vw,42px);max-width:20ch;margin-bottom:24px}
+.lead{color:var(--cinza);font-size:19px;max-width:34em;margin:22px 0 30px}
+.btn{display:inline-block;background:var(--y);color:var(--noite);font-weight:600;font-size:18px;text-decoration:none;padding:17px 30px;border-radius:999px}
+.btn:hover{background:#FDE047}
+.nota{color:var(--cinza);font-size:15px;margin-top:12px}
+.marca{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:18px;margin:28px 0 48px}
+.marca b{border:3px solid var(--y);color:var(--y);padding:0 7px;line-height:1.3}
+
+/* hero: a conversa */
+.hero{display:grid;gap:48px;align-items:center;padding-bottom:72px}
+@media(min-width:880px){.hero{grid-template-columns:1.05fr .95fr}}
+.fone{background:var(--tinta);border:1px solid var(--linha);border-radius:36px;padding:22px 18px 26px;max-width:400px;width:100%;justify-self:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.fone header{display:flex;align-items:center;gap:12px;padding:0 6px 16px;border-bottom:1px solid var(--linha);margin-bottom:16px}
+.fone header i{width:40px;height:40px;border-radius:50%;background:#475569;display:grid;place-items:center;font-style:normal;font-weight:600}
+.fone header small{display:block;color:var(--cinza);font-size:13px}
+.msg{max-width:86%;padding:11px 15px;border-radius:18px;font-size:15.5px;line-height:1.45;margin-bottom:10px}
+.cli{background:#334155;border-bottom-left-radius:6px}
+.eu{background:var(--y);color:var(--noite);margin-left:auto;border-bottom-right-radius:6px}
+.sis{text-align:center;color:var(--cinza);font-size:13px;margin:16px 0 12px}
+.anim .msg,.anim .sis{opacity:0;transform:translateY(8px);animation:surge .45s ease-out forwards}
+.anim>*:nth-child(2){animation-delay:.3s}.anim>*:nth-child(3){animation-delay:1.3s}
+.anim>*:nth-child(4){animation-delay:2.1s}.anim>*:nth-child(5){animation-delay:2.9s}.anim>*:nth-child(6){animation-delay:3.7s}
+@keyframes surge{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.anim .msg,.anim .sis{animation:none;opacity:1;transform:none}}
+
+section{padding:88px 0}
+.dores{display:grid;gap:4px;max-width:720px}
+.dores p{font-size:clamp(20px,2.6vw,26px);font-weight:500;padding:18px 0;border-top:1px solid var(--linha)}
+.dores p:last-child{border-bottom:1px solid var(--linha)}
+.virada{font-size:19px;max-width:36em;margin-top:32px;color:var(--cinza)}
+.virada strong{color:var(--w);font-weight:600}
+
+/* sumário: seção clara, como abrir o livro */
+.livro{background:var(--papel);color:var(--noite)}
+.livro .nota{color:#475569}
+.sumario{list-style:none;max-width:760px;margin-top:8px}
+.sumario li{display:grid;grid-template-columns:3ch 1fr;gap:14px;padding:16px 0;border-top:1px solid #CBD5E1}
+.sumario li span{font-weight:800;color:#64748B}
+.sumario li b{font-weight:600;display:block}
+.sumario li em{font-style:normal;color:#475569;font-size:16px}
+.capa-linha{display:grid;gap:40px;align-items:start}
+@media(min-width:880px){.capa-linha{grid-template-columns:1fr 300px}}
+.capa-linha img{width:100%;max-width:300px;box-shadow:0 24px 60px -18px rgba(15,23,42,.45);justify-self:center;position:sticky;top:32px}
+
+.prompt{background:var(--tinta);border:1px solid var(--linha);border-radius:20px;padding:26px;max-width:720px;font-size:17px}
+.prompt mark{background:none;color:var(--y);font-weight:500}
+.duas{display:grid;gap:48px;align-items:center}
+@media(min-width:880px){.duas{grid-template-columns:1.2fr .8fr}}
+video{width:100%;max-width:320px;border-radius:24px;border:1px solid var(--linha);justify-self:center;display:block}
+
+.preco{display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.preco{grid-template-columns:1fr 1fr}}
+.valor{font-size:clamp(72px,12vw,120px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.valor small{font-size:.3em;font-weight:500;letter-spacing:0;color:var(--cinza);margin-right:6px;vertical-align:.9em}
+.cupom{border:2px dashed var(--y);border-radius:16px;padding:20px 22px;margin-top:22px;max-width:420px}
+.cupom b{color:var(--y)}
+.garantia{color:var(--cinza);max-width:32em}
+.garantia strong{color:var(--w);display:block;font-size:22px;margin-bottom:6px}
+
+details{border-top:1px solid var(--linha);padding:20px 0;max-width:760px}
+details:last-of-type{border-bottom:1px solid var(--linha)}
+summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--y);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{color:var(--cinza);margin-top:10px;max-width:40em}
+footer{padding:48px 0 120px;color:var(--cinza);font-size:15px}
+footer p+p{margin-top:4px}
+.fixo{position:fixed;inset:auto 0 0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(15,23,42,.94);backdrop-filter:blur(8px);border-top:1px solid var(--linha);text-align:center}
+.fixo .btn{width:100%;max-width:440px;padding:14px}
+@media(min-width:880px){.fixo{display:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="marca"><b>IA</b> na Prática · Confeitaria</div>
+  <div class="hero">
+    <div>
+      <h1>Menos tempo no WhatsApp, mais tempo na cozinha</h1>
+      <p class="lead">40 pedidos prontos para o ChatGPT, Claude ou Gemini (versões gratuitas) feitos para quem vende bolos e doces: orçamento de festa, sinal, preço por quilo, Instagram e datas comemorativas.</p>
+      <a class="btn" href="https://pay.kiwify.com.br/0P1qUuA?utm_source=site&utm_content=conf-topo">Quero os 40 prompts por R$ 27</a>
+      <p class="nota">PDF no seu e-mail logo após o pagamento. Garantia de 7 dias.</p>
+    </div>
+    <div class="fone" aria-label="Exemplo de conversa usando o prompt 3">
+      <header><i>J</i><div>Juliana<small>cliente</small></div></header>
+      <div class="anim">
+        <p class="msg cli">Oi! Quanto fica um bolo de ninho com morango pra 30 pessoas, sábado?</p>
+        <p class="sis">Você usou o prompt 3 e a IA montou:</p>
+        <p class="msg eu">Oi, Juliana! Para 30 pessoas sugiro 3 kg 🎂 Fica R$ 270, com caixa e topo inclusos.</p>
+        <p class="msg eu">Para garantir o sábado, o sinal é de 50% (R$ 135) até quarta, no Pix.</p>
+        <p class="msg eu">Quer que eu já reserve a sua data?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="wrap">
+  <h2>A confeitaria vai bem. A sua semana, nem tanto?</h2>
+  <div class="dores">
+    <p>Responde orçamento de bolo até meia-noite no WhatsApp.</p>
+    <p>Cobra pelo preço da vizinha e não sabe se sobra lucro.</p>
+    <p>Cliente cancela na véspera e o sinal vira discussão.</p>
+    <p>Páscoa e Natal chegam e a agenda vira uma bagunça.</p>
+  </div>
+  <p class="virada">Você é ótima na cozinha. <strong>A IA cuida da parte de escrever, calcular e organizar.</strong> Este guia entrega os pedidos prontos, pensados para confeitaria.</p>
+</section>
+
+<section class="livro">
+  <div class="wrap">
+    <h2>O que tem no guia</h2>
+    <p class="nota">Cada capítulo traz prompts prontos para copiar, com as dicas de quem vive de encomenda.</p>
+    <ol class="sumario">
+      <li><span>0</span><div><b>A ficha da sua confeitaria</b><em>Monte uma vez e a IA passa a responder com a sua cara.</em></div></li>
+      <li><span>1</span><div><b>Encomendas no WhatsApp</b><em>Orçamento de festa, sinal sem constrangimento, agenda cheia, "tá caro", alergias.</em></div></li>
+      <li><span>2</span><div><b>Instagram que dá água na boca</b><em>Calendário de 30 dias, legendas, Reels de bastidor, enquete de sabor.</em></div></li>
+      <li><span>3</span><div><b>Preço certo</b><em>Ficha técnica, preço por quilo e por cento, valor da sua hora, taxa de entrega.</em></div></li>
+      <li><span>4</span><div><b>Datas que enchem a agenda</b><em>Cardápio de Páscoa e Natal, kits, lista de espera, encomendas de empresas.</em></div></li>
+      <li><span>5</span><div><b>Regras claras</b><em>Política de encomendas, recibo, cartão de conservação, lista de ingredientes.</em></div></li>
+      <li><span>6</span><div><b>Cuidados e plano de 7 dias</b><em>30 minutos por dia para colocar tudo em prática.</em></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Veja um prompt por inteiro</h2>
+  <div class="prompt">O custo dos ingredientes do meu bolo de <mark>[SABOR]</mark> é R$ <mark>[VALOR]</mark> por quilo. A embalagem custa R$ <mark>[VALOR]</mark>. Gasto cerca de R$ <mark>[VALOR]</mark> de gás e energia por bolo. Meus custos fixos do mês são R$ <mark>[VALOR]</mark> e vendo cerca de <mark>[NÚMERO]</mark> quilos por mês. Quero <mark>[PORCENTAGEM]</mark>% de lucro. Qual deveria ser o meu preço por quilo? Explique passo a passo.</div>
+  <p class="virada">Esse é o prompt 19. Troque o que está em amarelo pelos seus números e descubra se o seu preço dá lucro de verdade.</p>
+</section>
+
+<section class="wrap">
+  <h2>Para quem é</h2>
+  <div class="dores">
+    <p>Confeiteiras e confeiteiros que vendem por encomenda, em casa ou em cozinha pequena.</p>
+    <p>Quem vende bolos, doces de festa, bolo no pote, kits de presente.</p>
+    <p>Quem nunca usou IA, ou usou e recebeu resposta genérica.</p>
+  </div>
+</section>
+
+<section class="wrap preco">
+  <div>
+    <p class="valor"><small>R$</small>27</p>
+    <p class="nota">Pix, boleto ou cartão.</p>
+  </div>
+  <div>
+    <p class="garantia"><strong>Garantia de 7 dias</strong>Teste os prompts na sua confeitaria. Se não gostar, peça o reembolso em até 7 dias direto pela Kiwify.</p>
+    <a class="btn" style="margin-top:28px" href="https://pay.kiwify.com.br/0P1qUuA?utm_source=site&utm_content=conf-preco">Comprar o guia</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Perguntas frequentes</h2>
+  <details><summary>Preciso pagar alguma IA?</summary><p>Não. Tudo funciona nas versões gratuitas do ChatGPT, Claude ou Gemini.</p></details>
+  <details><summary>Já comprei o guia de pequenos negócios. Vale a pena?</summary><p>Este é outro guia: os 40 prompts foram escritos do zero para a rotina de confeitaria (encomenda, sinal, ficha técnica, datas). Poucos se repetem.</p></details>
+  <details><summary>Serve para salgados e marmitas?</summary><p>Boa parte sim (encomendas, preço, Instagram, documentos). Os exemplos são de bolos e doces.</p></details>
+  <details><summary>Como recebo?</summary><p>Logo após o pagamento chega um e-mail com o acesso. O PDF abre no celular e no computador.</p></details>
+</section>
+
+<footer class="wrap">
+  <p>IA na Prática, <a href="https://www.instagram.com/iapratica.negocios.br">@iapratica.negocios.br</a></p>
+</footer>
+
+<div class="fixo"><a class="btn" href="https://pay.kiwify.com.br/0P1qUuA?utm_source=site&utm_content=conf-fixo">Quero os 40 prompts por R$ 27</a></div>
+</body>
+</html>
